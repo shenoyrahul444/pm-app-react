@@ -31,4 +31,13 @@ This repo contains the code for a react-based Project Management App utilizing F
     1> Create React Templates and components with static data
     2> Connect them to redux and database
 
-    
+
+### Notes
+Redux Thunk - Middleware for async operations 
+Halts dispatch, 
+perform async request, 
+resume dispatch
+
+mapDispatchToProps => Adds action methods to props for performing database interactions or Store
+
+mapStateToPorps => Connects store with Props so store data is used properly
