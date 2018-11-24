@@ -25,12 +25,18 @@ This repo contains the code for a react-based Project Management App utilizing F
 # Dependencies
     # react
     # react-router-dom
+    # redux 
+    # react-redux
+    # thunk 
     
 
 # Steps
     1> Create React Templates and components with static data
-    2> Connect them to redux and database
+    2> Connect them to redux, middleware, actions, reducers
+    3> Database Setup
 
+# Firebase
+    Firestore - Realtime NoSQL database
 
 ### Notes
 Redux Thunk - Middleware for async operations 
