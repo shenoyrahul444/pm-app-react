@@ -1,5 +1,6 @@
 # Vyavastha - A project management app
 
+<<<<<<< HEAD
 This repo contains the code for a react-based Project Management App utilizing Firebase (Auth, DB, Cloud Functions, Hosting) and Thunk Middleware. Connected to a Heroku pipeline, the current version of the app will be live on : https://vyavashta.herokuapp.com
 
 
@@ -26,3 +27,7 @@ This repo contains the code for a react-based Project Management App utilizing F
     # react
     # react-router-dom
     
+=======
+This repo contains the code for a react-based Project Management App utilizing Firebase (Auth, DB, Cloud Functions, Hosting) and Thunk Middleware. Connected to a Heroku pipeline, the current version of the app will be live on : 
+https://vyavastha.herokuapp.com/
+>>>>>>> d1e638e4dae517b1240c7c37a570b550dd52f5bb
