@@ -26,3 +26,9 @@ This repo contains the code for a react-based Project Management App utilizing F
     # react
     # react-router-dom
     
+
+# Steps
+    1> Create React Templates and components with static data
+    2> Connect them to redux and database
+
+    
