@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter,Route } from 'react-router-dom';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
 import Navbar from './layout/Navbar';
 import Dashboard from './dashboard/Dashboard';
+import PlanDetails from './plans/PlanDetails';
 
 
 class App extends Component {
@@ -13,11 +14,11 @@ class App extends Component {
             
                       <Navbar />
                       
-                      <switch>
-                        <Route path = "/" component={Dashboard} />
+                      <Switch>
+                        <Route exact path = "/" component={Dashboard} />
+                        <Route path = "/plan/:id" component={PlanDetails} />
                       
-                      
-                      </switch>
+                      </Switch>
 
 
               
