@@ -7,7 +7,7 @@ const PlanList = ({plans}) => {
 
 
     return (
-        <div className="project-list section">
+        <div className="plan-list section">
             {
                 plans && plans.map(plan => {
                     return (

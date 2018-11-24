@@ -5,8 +5,13 @@ import { createPlan } from '../../store/actions/planActions';
 class CreatePlan extends Component {
   state = {
     title:'',
-    content:''
+    description:'',
+    amount:0,
+    periodic_budget:0,
+    frequency:'',
+    current_contribution:0  // Displaying money deducted periodically towards goal
   }
+
   handleChange = (e) => {
     this.setState({
         [e.target.id] : e.target.value
@@ -24,14 +29,37 @@ class CreatePlan extends Component {
             
             <h5 className="grey-text text-darken-3">Create Plan</h5>
             
+            {/* Title */}
             <div className="input-field">
                 <label htmlFor="title">Plan Title</label>
                 <input type="text" id="title" onChange={this.handleChange} />
             </div>
+
+          {/* Amount */}
             <div className="input-field">
-                <label htmlFor="content">Plan Content</label>
-                <textarea className="materialize-textarea" type="text" id="content" onChange={this.handleChange} />
+                <label htmlFor="amount">Amount</label>
+                <input type="number" id="amount" onChange={this.handleChange} />
             </div>
+
+          {/* Periodic Budget */}
+            <div className="input-field">
+                <label htmlFor="periodic_budget">Periodic Budget</label>
+                <input type="number" id="periodic_budget" onChange={this.handleChange} />
+            </div>
+
+
+            {/* Frequency */}
+            <div className="input-field">
+                <label htmlFor="frequency">Frequency</label>
+                <input type="text" id="frequency" onChange={this.handleChange} />
+            </div>
+
+            {/* Description */}
+            <div className="input-field">
+                <label htmlFor="description">Description</label>
+                <textarea className="materialize-textarea" type="text" id="description" onChange={this.handleChange} />
+            </div>
+            
             <div className="input-field">
                 <button className="btn pink lighten-1 z-index-0">Create Plan</button>
             </div>

@@ -8,8 +8,15 @@ const PlanSummary = ({plan}) => {
                     <span className="card-title">
                         {plan.title}
                     </span>
-                    <p>Posted by Rahul Shenoy</p>
-                    <p className="grey-text">21st November 2018</p>
+                    <p>Frequency: {plan.frequency}</p>
+                    <p>Periodic Budget : {plan.periodic_budget}</p>
+                    <p>Description: {plan.description}</p>
+                    <p>Amount: {plan.amount}</p>
+                    
+                    <p className="grey-text">Current Contribution: {plan.current_contribution}</p>
+                    <p className="grey-text">Remaining Contribution: {plan.remaining_contribution}</p>
+                    
+                    <p>Next Withdrawal: After a Given period</p>
                 </div>
             </div>
     )

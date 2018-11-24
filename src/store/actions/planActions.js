@@ -7,6 +7,8 @@ export const createPlan = (plan) => {
         firestore.collection('plans').add({
                   
                     ...plan,
+                    current_contribution:plan.periodic_budget,
+                    remaining_contribution: plan.amount - plan.periodic_budget,
                     authorFirstName: "Rahul",
                     authorLastName: "Shenoy",
                     authorId : 12345,
