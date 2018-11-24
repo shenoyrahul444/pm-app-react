@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Route } from 'react-router-dom';
 import Navbar from './layout/Navbar';
+import Dashboard from './dashboard/Dashboard';
 
 
 class App extends Component {
   render() {
     return (
-
-      <div className="App">
-      
         <BrowserRouter>
-          
-              <Navbar />
-         </BrowserRouter>
-      </div>
+
+            <div className="App">
+            
+                      <Navbar />
+                      
+                      <switch>
+                        <Route path = "/" component={Dashboard} />
+                      
+                      
+                      </switch>
+
+
+              
+            </div>
+      </BrowserRouter>
+
     );
   }
 }
