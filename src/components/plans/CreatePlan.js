@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import { createPlan } from '../../store/actions/planActions';
 
-export default class CreatePlan extends Component {
+class CreatePlan extends Component {
   state = {
     title:'',
     content:''
@@ -12,7 +14,7 @@ export default class CreatePlan extends Component {
   }
   handleSubmit = (e) => {
       e.preventDefault();
-      console.log(this.state);
+      this.props.createPlan(this.state)
   }
     render() {
       
@@ -38,3 +40,13 @@ export default class CreatePlan extends Component {
     )
   }
 }
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createPlan : (plan) => dispatch(createPlan(plan))
+  }
+}
+
+
+export default connect(null,mapDispatchToProps)(CreatePlan);

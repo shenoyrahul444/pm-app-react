@@ -6,6 +6,15 @@ const initState = {
     ]
 }
 const planReducer = (state = initState,action) => {
+    
+    switch(action.type){
+        case "CREATE_PLAN" : 
+            console.log('Created PLAN',action.plan);
+            break;
+    }
+    
+    
+    
     return state
 }
 

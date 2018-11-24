@@ -16,9 +16,6 @@ const PlanList = ({plans}) => {
                     }
                 )
             }
-            
-            
-            
         </div>
     )
 }
