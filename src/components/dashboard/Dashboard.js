@@ -3,6 +3,8 @@ import Notifications from './Notifications';
 import PlanList from '../plans/PlanList';
 import {connect} from 'react-redux';
 
+import {compose} from 'redux';
+import {firestoreConnect } from 'react-redux-firebase';
 
 class Dashboard extends Component {
 
@@ -38,11 +40,20 @@ const mapStateToProps = (state) => {
     console.log(state);
     return (
         {
-            plans : state.plan.plans
+            // plans : state.plan.plans
+            plans : state.firestore.ordered.plans
         }
     )
 }
 
 
 
-export default connect(mapStateToProps)(Dashboard);
+// Compose for composing multiple HOC. FirestoreConnect Syncs
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        {
+            collection:'plans'
+        }
+    ])
+)(Dashboard);

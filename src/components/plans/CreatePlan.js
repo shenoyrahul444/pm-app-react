@@ -14,13 +14,13 @@ class CreatePlan extends Component {
   }
   handleSubmit = (e) => {
       e.preventDefault();
-      this.props.createPlan(this.state)
+      this.props.createPlan(this.state);
   }
     render() {
       
     return (
       <div className="container">
-        <form onSubmit={this.handleSubmit} className="while">
+        <form onSubmit={this.handleSubmit} className="white">
             
             <h5 className="grey-text text-darken-3">Create Plan</h5>
             

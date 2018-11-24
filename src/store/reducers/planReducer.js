@@ -10,12 +10,18 @@ const planReducer = (state = initState,action) => {
     switch(action.type){
         case "CREATE_PLAN" : 
             console.log('Created PLAN',action.plan);
-            break;
+            return state;
+            
+    
+        case "CREATE_PLAN_ERROR" : 
+            console.log("Created PLAN ERROR");
+            return state;
+            
+    
+        default:
+            return state;
+
     }
-    
-    
-    
-    return state
 }
 
 export default planReducer;

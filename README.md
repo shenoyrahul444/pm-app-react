@@ -1,6 +1,6 @@
-# Vyavastha - A project management app
+# Vyavastha - A Plan management app
 
-This repo contains the code for a react-based Project Management App utilizing Firebase (Auth, DB, Cloud Functions, Hosting) and Thunk Middleware. Connected to a Heroku pipeline, the current version of the app will be live on : https://vyavashta.herokuapp.com
+This repo contains the code for a react-based Plan Management App utilizing Firebase (Auth, DB, Cloud Functions, Hosting) and Thunk Middleware. Connected to a Heroku pipeline, the current version of the app will be live on : https://vyavashta.herokuapp.com
 
 
 # Birds Eye View - App Structure
@@ -12,10 +12,10 @@ This repo contains the code for a react-based Project Management App utilizing F
 
         - URLS 
             - Dashboard ('/','/dashboard')
-                - Project List
+                - Plan List
                 - Notifications
-            - Project Details (/project/:id)
-            - Create Project (/create)
+            - Plan Details (/plan/:id)
+            - Create Plan (/create)
             - Sign In (/signin)
             - Signup  (/signup)
 
@@ -26,8 +26,16 @@ This repo contains the code for a react-based Project Management App utilizing F
     # react
     # react-router-dom
     # redux 
+        applyMiddleware
+        compose => Adding and combining store enhancers 
+
     # react-redux
     # thunk 
+        
+        withExtraArguments()
+
+    # react-redux-firebase
+    # redux-firestore
     
 
 # Steps
@@ -35,8 +43,21 @@ This repo contains the code for a react-based Project Management App utilizing F
     2> Connect them to redux, middleware, actions, reducers
     3> Database Setup
 
-# Firebase
-    Firestore - Realtime NoSQL database
+#  Firebase
+    
+    
+    # Firestore - Realtime NoSQL database
+
+    Schema
+    Plan  - (
+        title
+        content
+        authorFirstName
+        authorLastName
+        authorId
+        timestamp
+
+    )
 
 ### Notes
 Redux Thunk - Middleware for async operations 

@@ -4,7 +4,7 @@ export default function PlanDetails(props) {
 
     console.log(props.match.params.id);
   return (
-    <div className="container section project-details">
+    <div className="container section plan-details">
         <div className="card z-depth-0">
             <div className="card-content">
                 <span className="card-title">Plan Title</span>
