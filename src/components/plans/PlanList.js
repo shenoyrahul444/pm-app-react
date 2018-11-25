@@ -1,9 +1,10 @@
 import React from 'react';
 import PlanSummary from './PlanSummary';
+import {Link} from 'react-router-dom';
 
 const PlanList = ({plans}) => {
 
-    // const { plans } = this.props;
+    
 
 
     return (
@@ -11,7 +12,9 @@ const PlanList = ({plans}) => {
             {
                 plans && plans.map(plan => {
                     return (
-                        <PlanSummary plan={plan} key={plan.id} />
+                        <Link to={'/plan/'+plan.id} key={plan.id}>
+                                <PlanSummary plan={plan}  />
+                        </Link>
                         )
                     }
                 )

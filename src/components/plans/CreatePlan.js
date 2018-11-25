@@ -47,7 +47,6 @@ class CreatePlan extends Component {
                 <input type="number" id="periodic_budget" onChange={this.handleChange} />
             </div>
 
-
             {/* Frequency */}
             <div className="input-field">
                 <label htmlFor="frequency">Frequency</label>
