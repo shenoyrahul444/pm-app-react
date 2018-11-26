@@ -8,32 +8,44 @@ import {firestoreConnect } from 'react-redux-firebase';
 
 class Dashboard extends Component {
 
+
+    handleBankConnect(e){
+        alert("To be Implemented");
+    }
+
+
     render(){
 
-        // console.log(this.props)
-        const { plans } = this.props;
+                const netSpendableIncome = 10000;
+                const { plans } = this.props;
+
+                const btn_style = {
+                    margin:10
+                };
 
 
-    return (
-        <div className="dashboard container">
-            <div className="row">
-                
-                <div className="col s12 m6">
-                
-                    <PlanList plans = {plans} />
-                
-                </div>
-                
-                <div className="col s12 m5 offset-m1">
-                
-                        <Notifications />
-                
-                </div>
-            
-            </div>
-        </div>
+                return (
+                    <div className="dashboard container">
+                        <div className="row">
+                            
+                            <div className="col s12 m6">
+                                <h5 className="grey-text text-darken-3"> Net Spendable Income: ${netSpendableIncome}</h5>
 
-    )}
+                                <button className="btn bank-connect-btn" style={btn_style} onClick={this.handleBankConnect} >Connect with Bank Account</button>
+                                <PlanList plans = {plans} />
+                                
+                            </div>
+                            
+                            <div className="col s12 m5 offset-m1">
+                            
+                                    <Notifications />
+                            
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                )}
 };
 
 const mapStateToProps = (state) => {

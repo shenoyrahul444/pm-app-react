@@ -15,7 +15,6 @@ export const createPlan = (plan) => {
                     createdAt : new Date()
 
                 }).then(() =>  {
-                        
                         dispatch({  type:'CREATE_PLAN', plan     });
                 }).catch((err)=> {       // In case of error in database 
                     // Continuing with the dispatch
@@ -24,3 +23,20 @@ export const createPlan = (plan) => {
                     });
     }
 };
+export const deletePlan = (id) => {
+
+    return (dispatch,getState,{getFirebase,getFirestore})  => {
+
+        // Making async delete plan 
+        const firestore = getFirestore();
+        firestore.collection('plans').doc(id).delete()
+                        .then(()  => {
+                                dispatch({  type:'DELETE_PLAN', id   });
+                                    })
+    }
+    // return {}
+//     return (dispatch,getState,{getFirebase,getFirestore}) => {
+// const firestore = getFirestore();
+//         firestore.collection('plans').remove({})
+//     }
+}

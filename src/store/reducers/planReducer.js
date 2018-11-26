@@ -9,7 +9,11 @@ const planReducer = (state = initState,action) => {
     
     switch(action.type){
         case "CREATE_PLAN" : 
-            console.log('Created PLAN',action.plan);
+            console.log('Plan Created: ',action.plan);
+            return state;
+            
+        case "DELETE_PLAN" : 
+            console.log('Plan Deleted, Id:',action.id);
             return state;
             
     

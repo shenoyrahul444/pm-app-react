@@ -9,10 +9,8 @@ const PlanSummary = ({plan}) => {
                         {plan.title}    
                     </span>
                     <p>Frequency: {plan.frequency}</p>
-                    
                     <p>Description: {plan.description}</p>
-                    <p>Amount: {plan.amount}</p>
-                    
+                    <p>Amount: ${plan.amount}</p>
                     <p>Next Withdrawal: After a Given period</p>
                 </div>
             </div>
