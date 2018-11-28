@@ -2,6 +2,8 @@
 
 This repo contains the code for a react-based Plan Management App utilizing Firebase (Auth, DB, Cloud Functions, Hosting) and Thunk Middleware. Connected to a Heroku pipeline, the current version of the app will be live on : https://vyavashta.herokuapp.com
 
+http://vyavastha.s3-website-us-west-1.amazonaws.com/
+
 
 # Birds Eye View - App Structure
 
