@@ -1,6 +1,8 @@
 import React from 'react';
 
 const PlanSummary = ({plan}) => {
+    // var parser=new DOMParser();
+    // const frequency = parser.parseFromString(plan.frequency, "text/html");
     
     return (
         <div className="card z-depth-0 plan-summary">

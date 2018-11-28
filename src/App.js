@@ -10,11 +10,16 @@ import Signin from './components/auth/Signin';
 import Signup from './components/auth/Signup';
 
 class App extends Component {
+  
   render() {
+
+    const AppBackground  = {
+      backgroundColor: "#d9fcff"
+    }
     return (
         <BrowserRouter>
 
-            <div className="App">
+            <div className="App" style={AppBackground}>
             
                       <Navbar />
                       
